@@ -90,41 +90,68 @@
 		}
 	},
 	items: {
-		
+		'short sword': {
+			spritemap: 'imgs/rock.png',
+			width: 24,
+			height: 24,
+			dimensions: [24, 20],
+			animations: {
+				'sit': {
+					frames: [[0,0]]
+				}
+			}
+		}
 	},
 	levels: [
 		{
 			name: 'test',
 			grid: [
-				[{name: 'dirt', z: 0}, null],
-				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}]
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}],
+				[{name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}, {name: 'dirt', z: 0}]
 			],
 			beings: [
 				{
 					kind: 'z',
 					owner: 0,
-					location: [24,24]
-				},
-				{
-					kind: 'z',
-					owner: 1,
-					location: [48,24]
+					location: [240,240]
 				},
 				{
 					kind: 'bigtree',
 					location: [48,48]
 				},
 				{
-					kind: 'bigtree',
-					location: [0,72]
-				},
-				{
-					kind: 'bigtree',
-					location: [84,12]
-				},
-				{
 					kind: 'rock',
-					location: [0,12]
+					location: [24,12]
+				}
+			],
+			items: [
+				{
+					kind: 'short sword',
+					location: [140,220]
 				}
 			]
 		}

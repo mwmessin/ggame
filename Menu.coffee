@@ -1,24 +1,13 @@
 
-class @Item
-	constructor: ({icon, @name, @parent}) ->
-		$('<div>')
-		.addClass('option glossy')
-		.append($('<img>').attr('src', icon))
-		.append($('<span>').text(@name))
-		.mousedown(@mousedown)
-		.appendTo(@parent)
-		
-	mousedown: ({which}) =>
-		if which is 1
-			game.control.use(@name)
-
 class @Menu
-	constructor: ({items}) ->
-		@element = $('<div>').css('display', 'none').addClass('contextmenu').appendTo(game.level.infospace)
+	constructor: ({options}) ->
+		@element = $('<div>')
+		.css('display', 'none')
+		.addClass('contextmenu')
+		.appendTo(game.level.infospace)
 		
-		for name, item of items
-			new Item (
-				icon: item.icon
+		for name, option of options
+			new Option(union option, 
 				name: name
 				parent: @element
 			)
@@ -39,3 +28,36 @@ class @Menu
 		else
 			@element.css('display', if what then 'none' else 'block')
 		this
+
+	@main:
+		beings:
+			icon: "imgs/unit.png"
+			action: -> 
+				for name, being in game.beings
+					new Option(
+						name: name
+						parent: @element
+					)
+		terrain:
+			icon: "imgs/sprites.png"
+			action: -> new Animation.Editor
+		items:
+			icon: "imgs/tree.png"
+			action: -> 
+		abilities:
+			icon: "imgs/rock.png"
+			action: -> 
+
+
+class @Option
+	constructor: ({icon, @name, @action, @parent}) ->
+		$('<div>')
+		.addClass('option glossy')
+		.append($('<img>').attr('src', icon))
+		.append($('<span>').text(@name))
+		.mousedown(@mousedown)
+		.appendTo(@parent)
+		
+	mousedown: ({which}) =>
+		if which is 1
+			@action()
