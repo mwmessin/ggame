@@ -4,11 +4,14 @@ html {
 body {
   height: 100%;
   margin: 0;
+<<<<<<< HEAD
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
+=======
+>>>>>>> gh-pages
   user-select: none;
 }
 .view {
@@ -94,10 +97,13 @@ textarea {
   top: 5%;
   left: 5%;
   border-radius: 8px 8px 32px 32px/8px;
+<<<<<<< HEAD
   -moz-border-radius: 8px 8px 32px 32px/8px;
   -webkit-border-radius: 8px 8px 32px 32px/8px;
   background: -webkit-gradient(linear, 0% 0, 100% 0, from(rgba(255,255,255,0.05)), to(rgba(255,255,255,0.05)), color-stop(0.5, rgba(255,255,255,0.2)));
   background: -moz-linear-gradient(left, rgba(255,255,255,0.05), rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.05));
   background: -o-linear-gradient(left, rgba(255,255,255,0.05), rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.05));
+=======
+>>>>>>> gh-pages
   background: gradient(linear, 0% 0, 100% 0, from(rgba(255,255,255,0.05)), to(rgba(255,255,255,0.05)), color-stop(0.5, rgba(255,255,255,0.2)));
 }

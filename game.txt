@@ -1,0 +1,186 @@
+# TODO
+Animation Editor (Character maps?)
+	bitmap editor: canvas
+	sprite generator:
+		combine sprite parts onto a skeleton
+Selection (multi)
+Tile Editor
+Being Editor
+Life, Attack
+Projectiles
+
+Engine {
+	framerate: 30
+}
+
+Animation {
+	frames: [[Number Number Number]]
+	extrap: "loop" | "mirror" | "hold" | "reset"
+}
+
+Sprite {
+	src: String
+	map: [[Number Number]]
+	animations: {
+		_: Animation
+		...
+	}
+}
+
+Button {
+	icon: Sprite
+}
+
+Body {
+	location: [Number Number]
+	direction: [Number Number]
+	velocity: [Number Number]
+	offset: [Number Number]
+	radius: Number
+	sprite: Sprite
+}
+
+Projectile {
+	body: Body
+	effects: [Effect]
+}
+
+Ability {
+	name: String
+	icon: Sprite
+	effects: [Effect]
+	cooldown: Number
+	energyCost: Number
+	lifeCost: Number
+	channelTime: Number
+}
+
+Effect {
+	source: Being | [Number Number]
+	target: Being | [Number Number]
+	projectiles: [Projectile]
+	kind: Kind
+	life: Number
+	energy: Number
+	strength: Number
+	agility: Number
+	intelligence: Number
+	fortitude: Number
+	charisma: Number
+	duration: Number
+}
+
+Being {
+	name: String
+	owner: Player
+	level: Number
+	kind: Kind
+	influences: [Effect]
+	abilities: [String]
+	life: Number
+	lifeMax: Number
+	energy: Number
+	energyMax: Number
+	shields: Number
+	shieldsMax: Number
+	strength: Number
+	agility: Number
+	intelligence: Number
+	fortitude: Number
+	charisma: Number
+	body: Body
+}
+
+Slot "Head" | "Chest" | "Weapon" | "Alternate" | "Feet" | "Charm"
+
+Item {
+	name: String
+	body: Body
+	icon: Sprite
+	slot: Slot
+	effects: [Effect]
+}
+
+Drop {
+	chance: Number
+	items: [Item]
+}
+
+Mob {
+	name: String
+	members: [Being]
+	sources: [Structure]
+	drops: [Drop]
+}
+
+Structure {
+	name: String
+	sprite: Sprite
+	walkable: [[Boolean]] | Boolean
+	flyable: [[Boolean]] | Boolean
+	swimmable: [[Boolean]] | Boolean
+}
+
+Tile {
+	name: String
+	sprite: Sprite
+	walkable: Boolean
+	flyable: Boolean
+	swimmable: Boolean
+}
+
+Level {
+	name: String
+	tiles: [[String]]
+	terrain: [[Number]]
+	beings: [Being]
+	items: [Item]
+	structures: [Structure]
+	portals: [Portal]
+}
+
+Map {
+	
+}
+
+World {
+	
+}
+
+System {
+	
+}
+
+Galaxy {
+	
+}
+
+Universe {
+	
+}
+
+Menu {
+	terra: [ground raise]
+	units: [+]
+}
+
+Tool
+
+Screen {
+	menus: [Menu]
+	
+}
+
+Player {
+	account: Account?
+	hero: Being
+	hotkeys: [Tool]
+	using: Tool
+}
+
+Game {
+	beings: [Being]
+	tiles: [Tile]
+	items: [Item]
+	levels: [Level]
+}

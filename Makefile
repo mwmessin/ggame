@@ -1,6 +1,6 @@
 
 all:
-	stylus *.styl
-	mv *.css css/
 	coffee -c *.coffee
 	mv *.js js/
+	stylus *.styl
+	mv *.css css/

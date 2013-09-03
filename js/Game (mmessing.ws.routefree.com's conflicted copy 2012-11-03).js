@@ -25,13 +25,9 @@
       this.beings = beings;
       this.tiles = tiles;
       this.items = items;
-<<<<<<< HEAD
       this.engine = new Engine();
       this.level = new Level(levels[0]);
       this.control = new Control();
-=======
-      this.canvasTerrain(this.generateTerrain(9));
->>>>>>> gh-pages
     }
 
     Game.prototype.save = function() {
@@ -44,7 +40,7 @@
     };
 
     Game.prototype.generateTerrain = function(order) {
-      var average, col, factor, grid, half, length, random, segments, terrain, x, y, z, _i, _j, _k, _l, _len, _len1;
+      var average, col, factor, grid, half, length, segments, terrain, x, y, z, _i, _j, _k, _l, _len, _len1;
       if (order == null) {
         order = 1;
       }
@@ -56,9 +52,6 @@
           col[y] = 0.0;
         }
       }
-      random = function(factor) {
-        return (Math.random() - 0.5) * 2 * factor;
-      };
       factor = 1;
       length = segments;
       while (length >= 2) {
@@ -68,26 +61,22 @@
           x = 0;
           while (x < segments) {
             average = (grid[y][x] + grid[y + length][x] + grid[y][x + length] + grid[y + length][x + length]) / 4;
-            grid[y + half][x + half] = average + random(factor);
+            grid[y + half][x + half] = average + Math.random() * factor;
             x += length;
           }
           y += length;
         }
-        y = half;
+        y = 0;
         while (y < segments) {
-          x = half;
+          x = (y + half) % length;
           while (x < segments) {
-            if (y === half) {
-              average = (grid[(y - length + segments) % segments][x] + grid[y - half][x + half] + grid[y][x] + grid[y - half][x - half]) / 4;
-              grid[y - half][x] = average + random(factor);
+            average = (grid[(y - half + segments) % segments][x] + grid[(y + half) % segments][x] + grid[y][(x + half) % segments] + grid[y][(x - half + segments) % segments]) / 4;
+            grid[y][x] = average + Math.random() * factor;
+            if (y === 0) {
+              grid[segments][x] = average + Math.random() * factor;
             }
-            average = (grid[y - half][x + half] + grid[y][(x + length + segments) % segments] + grid[y + half][x + half] + grid[y][x]) / 4;
-            grid[y][x + half] = average + random(factor);
-            average = (grid[y][x] + grid[y + half][x + half] + grid[(y + length + segments) % segments][x] + grid[y + half][x - half]) / 4;
-            grid[y + half][x] = average + random(factor);
-            if (x === half) {
-              average = (grid[y - half][x - half] + grid[y][x] + grid[y + half][x - half] + grid[y][(x - length + segments) % segments]) / 4;
-              grid[y][x - half] = average + random(factor);
+            if (x === 0) {
+              grid[y][segments] = average + Math.random() * factor;
             }
             x += length;
           }
@@ -109,51 +98,6 @@
         }
       }
       return terrain;
-    };
-
-    Game.prototype.canvasTerrain = function(terrain) {
-      var canvas, context, data, frame, setPixel, v, width, x, y, _i, _j, _ref;
-      width = terrain.length;
-      $("body").append(canvas = $("<canvas>", {
-        css: {
-          border: "1px solid green"
-        }
-      }).attr({
-        width: width,
-        height: width
-      }));
-      context = canvas[0].getContext("2d");
-      frame = (_ref = context.getImageData(0, 0, width, width), data = _ref.data, _ref);
-      setPixel = function(x, y, r, g, b, a) {
-        var index;
-        index = (x + y * width) * 4;
-        data[index + 0] = r;
-        data[index + 1] = g;
-        data[index + 2] = b;
-        return data[index + 3] = a;
-      };
-      for (x = _i = 0; 0 <= width ? _i < width : _i > width; x = 0 <= width ? ++_i : --_i) {
-        for (y = _j = 0; 0 <= width ? _j < width : _j > width; y = 0 <= width ? ++_j : --_j) {
-          v = (terrain[x][y].z + 1) / 2 * 255 | 0;
-          setPixel(x, y, v, v, v, 255);
-        }
-      }
-      return context.putImageData(frame, 0, 0);
-    };
-
-    Game.prototype.logTerrain = function(terrain) {
-      var msg, x, y, _i, _j, _len, _len1, _results;
-      _results = [];
-      for (_i = 0, _len = terrain.length; _i < _len; _i++) {
-        x = terrain[_i];
-        msg = "";
-        for (_j = 0, _len1 = x.length; _j < _len1; _j++) {
-          y = x[_j];
-          msg += y.z.toFixed(2) + " ";
-        }
-        _results.push(console.log(msg));
-      }
-      return _results;
     };
 
     return Game;
@@ -450,10 +394,6 @@
         cursor: "url('imgs/tile.cur') 8 4, crosshair",
         paint: function(x, y) {
           var grid, index, level, num, tile, tileset;
-<<<<<<< HEAD
-          console.log(x, y);
-=======
->>>>>>> gh-pages
           x -= parseInt(game.level.element.css('left'));
           y -= parseInt(game.level.element.css('bottom'));
           x = x / 24 | 0;

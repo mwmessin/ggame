@@ -22,7 +22,6 @@ class @Game
 		@items = items
 
 		#levels[0].grid = @generateTerrain()
-		#@canvasTerrain( @generateTerrain(9) )
 		
 		@engine = new Engine()
 		@level = new Level(levels[0])
@@ -43,8 +42,6 @@ class @Game
 			for y in [0..segments]
 				col[y] = 0.0
 
-		random = (factor) -> (Math.random() - 0.5) * 2 * factor
-
 		factor = 1
 		length = segments
 		while length >= 2
@@ -61,53 +58,24 @@ class @Game
 						grid[y][x + length] + 
 						grid[y + length][x + length]
 					) / 4
-					grid[y + half][x + half] = average + random(factor)
+					grid[y + half][x + half] = average + Math.random() * factor
 					x += length
 				y += length	
 
 			#diamond step
-			y = half
+			y = 0
 			while y < segments
-				x = half
+				x = (y + half) % length
 				while x < segments
-					#top
-					if y is half 
-						average = (
-							grid[(y - length + segments) % segments][x] + 
-							grid[y - half][x + half] + 
-							grid[y][x] + 
-							grid[y - half][x - half]
-						) / 4
-						grid[y - half][x] = average + random(factor)
-
-					#right
 					average = (
-						grid[y - half][x + half] + 
-						grid[y][(x + length + segments) % segments] + 
-						grid[y + half][x + half] + 
-						grid[y][x]
+						grid[(y - half + segments) % segments][x] + 
+						grid[(y + half) % segments][x] + 
+						grid[y][(x + half) % segments] + 
+						grid[y][(x - half + segments) % segments]
 					) / 4
-					grid[y][x + half] = average + random(factor)
-
-					#bottom
-					average = (
-						grid[y][x] + 
-						grid[y + half][x + half] + 
-						grid[(y + length + segments) % segments][x] + 
-						grid[y + half][x - half]
-					) / 4
-					grid[y + half][x] = average + random(factor)
-
-					#left
-					if x is half
-						average = (
-							grid[y - half][x - half] + 
-							grid[y][x] + 
-							grid[y + half][x - half] + 
-							grid[y][(x - length + segments) % segments]
-						) / 4
-						grid[y][x - half] = average + random(factor)
-
+					grid[y][x] = average + Math.random() * factor
+					grid[segments][x] = average + Math.random() * factor if y is 0
+					grid[y][segments] = average + Math.random() * factor if x is 0
 					x += length
 				y += length	
 
@@ -121,46 +89,6 @@ class @Game
 				terrain[x][y] = {name: 'dirt', z: z}
 
 		terrain
-
-	canvasTerrain: (terrain) ->
-		width = terrain.length
-
-		$("body").append(
-			canvas = $("<canvas>"
-				css:
-					border: "1px solid green"
-			)
-			.attr(
-				width: width
-				height: width
-			)
-		)
-		
-		context = canvas[0].getContext("2d")
-		frame = {data} = context.getImageData(0, 0, width, width)
-		
-		setPixel = (x, y, r, g, b, a) ->
-			index = (x + y * width) * 4
-			data[index + 0] = r
-			data[index + 1] = g
-			data[index + 2] = b
-			data[index + 3] = a
-
-		for x in [0...width]
-			for y in [0...width]
-				v = (terrain[x][y].z + 1) / 2 * 255 | 0
-				setPixel(x, y, v, v, v, 255)
-
-		context.putImageData(frame, 0, 0)
-
-	logTerrain: (terrain) ->
-		for x in terrain
-			msg = ""
-			for y in x
-				msg += y.z.toFixed(2) + " "
-			console.log msg
-
-
 
 class @Engine
 	constructor: (options) ->
