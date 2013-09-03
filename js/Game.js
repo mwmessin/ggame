@@ -25,13 +25,9 @@
       this.beings = beings;
       this.tiles = tiles;
       this.items = items;
-<<<<<<< HEAD
       this.engine = new Engine();
       this.level = new Level(levels[0]);
       this.control = new Control();
-=======
-      this.canvasTerrain(this.generateTerrain(9));
->>>>>>> gh-pages
     }
 
     Game.prototype.save = function() {
@@ -450,10 +446,6 @@
         cursor: "url('imgs/tile.cur') 8 4, crosshair",
         paint: function(x, y) {
           var grid, index, level, num, tile, tileset;
-<<<<<<< HEAD
-          console.log(x, y);
-=======
->>>>>>> gh-pages
           x -= parseInt(game.level.element.css('left'));
           y -= parseInt(game.level.element.css('bottom'));
           x = x / 24 | 0;
