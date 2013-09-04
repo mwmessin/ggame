@@ -1,25 +1,27 @@
-![ggame logo]
+ggame
+========
 
-  Example Coffeescript tile-engine for a 2D Top-Down RPG. Raise and lower terrain through the right-click menu. Place trees and rocks with collision. Save terrain out to json and load from json. Sprites created by Michael Messing.
+### Description
 
-## Quick Start
+Example Coffeescript tile-engine for a 2D Top-Down RPG. Raise and lower terrain through the right-click menu. Place trees and rocks with collision. Save terrain out to json and load from json. Sprites created by Michael Messing.
 
- The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:
+### Controls
 
- Create the app:
+* 1 - Select add tile (only works above and to the right of lower left corner of map)
+* 2 - Select raise terrain
+* 3 - Select lower terrain
+* 4 - Select plant tree
+* w,a,s,d - Move Link around
 
-    $ npm install -g express
-    $ express /tmp/foo && cd /tmp/foo
+### Project Page
 
- Install dependencies:
+[ggame](http://mwmessin.github.io/ggame/)
 
-    $ npm install
+### Author(s)
 
- Start the server:
+mwmessin
 
-    $ node app
-
-## License
+### License
 
 (The MIT License)
 
