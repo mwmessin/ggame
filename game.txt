@@ -1,4 +1,10 @@
+# BUGS
+
+serialize reload is not unbinding control
+
 # TODO
+
+level collision with height, ramps
 Animation Editor (Character maps?)
 	bitmap editor: canvas
 	sprite generator:
@@ -8,6 +14,8 @@ Tile Editor
 Being Editor
 Life, Attack
 Projectiles
+
+#SCHEMAS
 
 Engine {
 	framerate: 30

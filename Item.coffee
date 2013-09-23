@@ -1,5 +1,7 @@
 
 class @Item extends Body
+	isItem: true
+
 	constructor: (options) ->
 		super options
 

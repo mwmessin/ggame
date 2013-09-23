@@ -1,13 +1,9 @@
 class @Level
 	constructor: ({name, grid, beings, items}) ->
-		engine = game.engine
-		tileset = game.tiles
-		beingset = game.beings
-		itemset = game.items
 		@name = name
 		@grid = grid
 
-		element = @element = $("<div>").addClass("level").appendTo(game.view)
+		element = @element = $("<div>", class: "level")
 		tilespace = @tilespace = $("<div>").addClass("tilespace").appendTo(element)
 		beingspace = @beingspace = $("<div>").addClass("beingspace").appendTo(element)
 		infospace = @infospace = $("<div>").addClass("infospace").appendTo(element)
@@ -17,7 +13,7 @@ class @Level
 			y = rows - i - 1
 			for tile, x in row
 				continue unless tile?
-				extend tile, tileset[tile.name]
+				extend tile, game.tiles[tile.name]
 				extend tile, 
 					parent: tilespace
 					location: [x * 24, y * 24]
@@ -25,24 +21,26 @@ class @Level
 				@orientTile(x, y)
 		
 		for being in beings
-			owner = being.owner
-			extend being, beingset[being.kind]
-			extend being,
-				parent: beingspace
-			being = new Being(being)
-			game.players[owner]?.heroes.push(being)
-			engine.add(being)
+			game.engine.add(
+				new Being(union being, game.beings[being.kind], parent: beingspace)
+			)
 
 		for item in items
-			extend item, itemset[item.kind]
-			item.parent = beingspace
-			item = new Item(item)
-			engine.add(item)
+			game.engine.add(
+				new Item(union item, game.items[item.kind], parent: beingspace)
+			)
 	
 	save: ->
+		beings = []
+		items = []
+		for body in game.engine.system
+			if body.isBeing then beings.push body.save()
+			else if body.isItem then items.push body.save()
+
 		name: @name
 		grid: ((tile?.save() for tile in row) for row in @grid)
-		beings: (being.save() for being in game.engine.system)
+		beings: beings
+		items: items
 	
 	collide: (object, width = 24, height = 24) ->
 		{x1, x2, y1, y2} = object
@@ -189,4 +187,130 @@ class @Level
 			@orientTile x, y - 2, true
 			@orientTile x + 1, y - 2, true
 
+
+	generateTerrain: (order = 1) ->
+		segments = Math.pow(2, order)
+
+		grid = []
+		for x in [0..segments]
+			col = grid[x] = []
+			for y in [0..segments]
+				col[y] = 0.0
+
+		random = (factor) -> (Math.random() - 0.5) * 2 * factor
+
+		factor = 1
+		length = segments
+		while length >= 2
+			half = length / 2
+
+			#square step
+			y = 0
+			while y < segments
+				x = 0
+				while x < segments
+					average = (
+						grid[y][x] + 
+						grid[y + length][x] + 
+						grid[y][x + length] + 
+						grid[y + length][x + length]
+					) / 4
+					grid[y + half][x + half] = average + random(factor)
+					x += length
+				y += length	
+
+			#diamond step
+			y = half
+			while y < segments
+				x = half
+				while x < segments
+					#top
+					if y is half 
+						average = (
+							grid[(y - length + segments) % segments][x] + 
+							grid[y - half][x + half] + 
+							grid[y][x] + 
+							grid[y - half][x - half]
+						) / 4
+						grid[y - half][x] = average + random(factor)
+
+					#right
+					average = (
+						grid[y - half][x + half] + 
+						grid[y][(x + length + segments) % segments] + 
+						grid[y + half][x + half] + 
+						grid[y][x]
+					) / 4
+					grid[y][x + half] = average + random(factor)
+
+					#bottom
+					average = (
+						grid[y][x] + 
+						grid[y + half][x + half] + 
+						grid[(y + length + segments) % segments][x] + 
+						grid[y + half][x - half]
+					) / 4
+					grid[y + half][x] = average + random(factor)
+
+					#left
+					if x is half
+						average = (
+							grid[y - half][x - half] + 
+							grid[y][x] + 
+							grid[y + half][x - half] + 
+							grid[y][(x - length + segments) % segments]
+						) / 4
+						grid[y][x - half] = average + random(factor)
+
+					x += length
+				y += length	
+
+			length /= 2
+			factor /= 2
+
+		terrain = []
+		for col, x in grid
+			terrain[x] = []
+			for z, y in col
+				terrain[x][y] = {name: 'dirt', z: z}
+
+		terrain
+
+	canvasTerrain: (terrain) ->
+		width = terrain.length
+
+		$("body").append(
+			canvas = $("<canvas>"
+				css:
+					border: "1px solid green"
+			)
+			.attr(
+				width: width
+				height: width
+			)
+		)
+		
+		context = canvas[0].getContext("2d")
+		frame = {data} = context.getImageData(0, 0, width, width)
+		
+		setPixel = (x, y, r, g, b, a) ->
+			index = (x + y * width) * 4
+			data[index + 0] = r
+			data[index + 1] = g
+			data[index + 2] = b
+			data[index + 3] = a
+
+		for x in [0...width]
+			for y in [0...width]
+				v = (terrain[x][y].z + 1) / 2 * 255 | 0
+				setPixel(x, y, v, v, v, 255)
+
+		context.putImageData(frame, 0, 0)
+
+	logTerrain: (terrain) ->
+		for x in terrain
+			msg = ""
+			for y in x
+				msg += y.z.toFixed(2) + " "
+			console.log msg
 			

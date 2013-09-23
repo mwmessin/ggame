@@ -9,11 +9,17 @@
 
     Being.name = 'Being';
 
+    Being.prototype.isBeing = true;
+
     function Being(options) {
+      var _ref;
       Being.__super__.constructor.call(this, options);
       options.speed || (options.speed = 5);
-      this.name = options.name, this.owner = options.owner, this.orders = options.orders, this.weapon = options.weapon, this.headgear = options.headgear, this.armor = options.armor, this.boots = options.boots, this.gloves = options.gloves, this.jewelry = options.jewelry, this.offHand = options.offHand, this.life = options.life, this.lifeMax = options.lifeMax, this.lifeRegen = options.lifeRegen, this.lifeLeech = options.lifeLeech, this.energy = options.energy, this.energyMax = options.energyMax, this.energyRegen = options.energyRegen, this.energyLeech = options.energyLeech, this.speed = options.speed, this.defense = options.defense, this.dodge = options.dodge, this.critChance = options.critChance, this.critBonus = options.critBonus, this.stunChance = options.stunChance, this.stunDuration = options.stunDuration, this.strength = options.strength, this.dexterity = options.dexterity, this.intelligence = options.intelligence, this.vitality = options.vitality, this.greed = options.greed, this.luck = options.luck, this.geology = options.geology;
+      this.name = options.name, this.kind = options.kind, this.owner = options.owner, this.orders = options.orders, this.weapon = options.weapon, this.headgear = options.headgear, this.armor = options.armor, this.boots = options.boots, this.gloves = options.gloves, this.jewelry = options.jewelry, this.offHand = options.offHand, this.life = options.life, this.lifeMax = options.lifeMax, this.lifeRegen = options.lifeRegen, this.lifeLeech = options.lifeLeech, this.energy = options.energy, this.energyMax = options.energyMax, this.energyRegen = options.energyRegen, this.energyLeech = options.energyLeech, this.speed = options.speed, this.defense = options.defense, this.dodge = options.dodge, this.critChance = options.critChance, this.critBonus = options.critBonus, this.stunChance = options.stunChance, this.stunDuration = options.stunDuration, this.strength = options.strength, this.dexterity = options.dexterity, this.intelligence = options.intelligence, this.vitality = options.vitality, this.greed = options.greed, this.luck = options.luck, this.geology = options.geology;
       this.inventory = [];
+      if ((_ref = game.players[this.owner]) != null) {
+        _ref.heroes.push(this);
+      }
     }
 
     Being.prototype.calcDamage = function() {

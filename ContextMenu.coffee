@@ -1,8 +1,11 @@
 
-class @Menu
+window.oncontextmenu = -> false
+		
+class @ContextMenu
 	constructor: ({options}) ->
 		@element = $('<div>')
 		.css('display', 'none')
+		.addClass('contextmenu')
 		.appendTo(game.level.infospace)
 		
 		for name, option of options

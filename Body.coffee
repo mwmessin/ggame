@@ -1,5 +1,7 @@
 
 class @Body extends Sprite
+	isBody: true
+
 	constructor: (options) ->
 		super options
 		@direction = new Vector2(options.direction or [ 0, 0 ])

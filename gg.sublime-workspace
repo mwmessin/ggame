@@ -1,0 +1,857 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"even",
+				"eventName"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"cla",
+				"addClass"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"sty",
+				"style"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game.txt",
+			"settings":
+			{
+				"buffer_size": 2283,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 69,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.styl",
+			"settings":
+			{
+				"buffer_size": 1536,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gg.sublime-project",
+			"settings":
+			{
+				"buffer_size": 81,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Natives.coffee",
+			"settings":
+			{
+				"buffer_size": 1476,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Algebra.coffee",
+			"settings":
+			{
+				"buffer_size": 9727,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Network.coffee",
+			"settings":
+			{
+				"buffer_size": 39,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Default.coffee",
+			"settings":
+			{
+				"buffer_size": 14690,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Level.coffee",
+			"settings":
+			{
+				"buffer_size": 6869,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 317.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mwmessin/Dropbox/ggame/gg.sublime-project",
+		"/Users/mwmessin/Dropbox/ggame/gg.sublime-workspace",
+		"/Users/mwmessin/Dropbox/MWM.sublime-workspace",
+		"/Users/mwmessin/Dropbox/MWM.sublime-project",
+		"/Users/mwmessin/Dropbox/work/Reputation/Calculator.html",
+		"/Users/mwmessin/Dropbox/work/Clover/CloverMatch.js",
+		"/Users/mwmessin/Dropbox/work/Clover/thankletter",
+		"/Users/mwmessin/Dropbox/work/Calculator.html",
+		"/Users/mwmessin/Dropbox/work/Clover/index.html",
+		"/Users/mwmessin/Dropbox/work/Reputation/$.js",
+		"/Users/mwmessin/Dropbox/work/Clover/input.json",
+		"/Users/mwmessin/Dropbox/S/index.php",
+		"/Users/mwmessin/Dropbox/index.html",
+		"/Users/mwmessin/Dropbox/ggame/index.html",
+		"/Users/mwmessin/Dropbox/M3/index.html",
+		"/Users/mwmessin/Dropbox/M3/realtime.sh",
+		"/Users/mwmessin/Dropbox/M3/setup.sh",
+		"/Users/mwmessin/Dropbox/work/Study/Trees.js",
+		"/Users/mwmessin/Dropbox/work/Study/Random.js",
+		"/Users/mwmessin/Dropbox/work/Study/Graphs.js",
+		"/Users/mwmessin/Dropbox/work/Study/Sorting.js",
+		"/Users/mwmessin/Downloads/okcupid/input.json",
+		"/Users/mwmessin/Dropbox/work/CloverOut.json",
+		"/Users/mwmessin/Dropbox/work/CloverMatch.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/thankletter",
+		"/Users/mwmessin/Dropbox/ggame/Makefile",
+		"/Users/mwmessin/Dropbox/ggame/Algebra.coffee",
+		"/Users/mwmessin/Dropbox/DOMMario/README.md",
+		"/Users/mwmessin/Dropbox/ggame/Level.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Readme.md",
+		"/Users/mwmessin/Dropbox/ggame/Game.coffee",
+		"/Users/mwmessin/Dropbox/.bashrc",
+		"/Users/mwmessin/Dropbox/ggame/Body.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Default.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Menu.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Player.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Natives.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Sprite.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Item.coffee",
+		"/Users/mwmessin/Dropbox/ggame/Being.coffee",
+		"/Users/mwmessin/Dropbox/ggame/style.styl",
+		"/Users/mwmessin/Dropbox/ggame/Server.coffee",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/header.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/leftPanel.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/midPanel.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/rightPanel.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/shared.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/js/jquery.extensions.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/js/views.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/js/data.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/js/main.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/index.html",
+		"/Users/mwmessin/Dropbox/Reflection/README.md",
+		"/Users/mwmessin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mwmessin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/mwmessin/Dropbox/work/ModelN/data.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/jquery.extensions.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/views.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/main.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/styles.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/hacks.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/css/normalize.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/scripts.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/window.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/stat.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/underscore.js",
+		"/Users/mwmessin/Dropbox/work/ModelN/styles.css",
+		"/Users/mwmessin/Dropbox/work/ModelN/normalize.css",
+		"/Users/mwmessin/Dropbox/NodeChat/server.js",
+		"/Users/mwmessin/Dropbox/NodeChat/package.json",
+		"/Users/mwmessin/Dropbox/NodeChat/zips.json",
+		"/Users/mwmessin/Dropbox/Wolf/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/lib/process.js",
+		"/Users/mwmessin/Dropbox/S/DemoReel.php",
+		"/Users/mwmessin/.profile",
+		"/Users/mwmessin/Dropbox/Classical/Classical.js",
+		"/Users/mwmessin/Dropbox/Reflection/index.html",
+		"/Users/mwmessin/Dropbox/Backbone/index.html",
+		"/Users/mwmessin/Dropbox/S/Makefile",
+		"/Users/mwmessin/Dropbox/Reflection/reflection.coffee",
+		"/Users/mwmessin/Dropbox/S/style.styl",
+		"/Users/mwmessin/Dropbox/Backbone.js",
+		"/Users/mwmessin/Dropbox/Backbone/localStorage.js",
+		"/Users/mwmessin/Dropbox/Makefile",
+		"/Users/mwmessin/Dropbox/S/Viewer.coffee",
+		"/Users/mwmessin/Dropbox/S/Main.coffee",
+		"/Users/mwmessin/Dropbox/S/Slideshow.coffee",
+		"/Users/mwmessin/Dropbox/mwm.coffee",
+		"/Users/mwmessin/Dropbox/Underscore.js",
+		"/Users/mwmessin/Dropbox/backbone.html",
+		"/Users/mwmessin/Dropbox/BackboneApp.js",
+		"/Users/mwmessin/Dropbox/mwm.styl",
+		"/Users/mwmessin/Dropbox/polyfiller.js",
+		"/Users/mwmessin/Dropbox/S/Links.php",
+		"/Users/mwmessin/Dropbox/chrome-exts/ycombinator.user.js",
+		"/Users/mwmessin/Dropbox/S/notes.txt",
+		"/Users/mwmessin/Dropbox/S/Projects.php",
+		"/Users/mwmessin/Dropbox/raphael.js",
+		"/Users/mwmessin/Dropbox/HackerDojo/style.styl",
+		"/Users/mwmessin/Dropbox/S/css/style.css",
+		"/Users/mwmessin/Dropbox/$.js",
+		"/Users/mwmessin/Downloads/webshims-1.10.4/index.html",
+		"/Users/michaelmessing/Dropbox/Wolf/client/sprite.coffee",
+		"/Users/michaelmessing/Dropbox/Wolf/client/camera.coffee",
+		"/Users/michaelmessing/Dropbox/Wolf/client/level.coffee",
+		"/Users/michaelmessing/Dropbox/Wolf/client/player.coffee",
+		"/Users/michaelmessing/Dropbox/Wolf/client/world.coffee",
+		"/Users/michaelmessing/Dropbox/Wolf/client/start.coffee",
+		"/Users/michaelmessing/Dropbox/Makefile",
+		"/Users/michaelmessing/Dropbox/mwm.coffee",
+		"/Users/michaelmessing/Dropbox/mwm.styl",
+		"/Users/michaelmessing/Dropbox/Wolf/index.html",
+		"/Users/michaelmessing/Dropbox/Wolf/Makefile",
+		"/Users/michaelmessing/Dropbox/MWM.sublime-project",
+		"/Users/mwmessin/Dropbox/Wolf/client/time.coffee",
+		"/Users/mwmessin/Dropbox/Wolf/tests/control.coffee",
+		"/Users/mwmessin/Dropbox/Wolf/tests/test.html",
+		"/Users/mwmessin/Dropbox/Wolf/tests/control.html",
+		"/Users/mwmessin/Dropbox/Wolf/tests/test.coffee",
+		"/Users/mwmessin/Dropbox/Wolf/client/index.html",
+		"/Users/mwmessin/Dropbox/S/Home.php",
+		"/Users/mwmessin/Dropbox/S/Contact.php",
+		"/Users/mwmessin/Dropbox/S/Credits.php",
+		"/Users/mwmessin/Dropbox/Wolf/client/network.coffee",
+		"/Users/mwmessin/Dropbox/S/style.css",
+		"/Users/mwmessin/Dropbox/S/js/Slideshow.js",
+		"/Users/mwmessin/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mwmessin/Dropbox/SublimeText2/User/Preferences.sublime-settings",
+		"/Users/mwmessin/Dropbox/mwm.sublime-build"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"    ",
+			"1.",
+			"===",
+			">>>",
+			"Item",
+			"Engine.add",
+			"    ",
+			"	",
+			"fontWei",
+			"noteBody",
+			"leftPan",
+			"clearfix",
+			"body",
+			".info",
+			"build",
+			"VIN",
+			"project",
+			"info",
+			"credits",
+			"proj",
+			"projj",
+			"projc",
+			"footer",
+			"projects",
+			"glow",
+			"glowBot",
+			"footer",
+			"linear-gradient",
+			"ckground: \\\n        -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 16%, rgba(255,255,255,0.12) 56%, rgba(255,255,255,0) 56%, rgba(255,255,255,0) 100%), \\\n      ",
+			"a.logo",
+			"GPU",
+			"info",
+			"biopic",
+			"dots",
+			"reel",
+			";",
+			"GPU",
+			"transform: GPU()",
+			"transform:",
+			"transform",
+			"glowBottom",
+			".project",
+			"	",
+			".slide",
+			"Slide",
+			".project",
+			".thumbnail",
+			"server",
+			"coffee",
+			"{",
+			".info",
+			"overlay",
+			"bioblurb",
+			"project",
+			"glowBottom",
+			"box-shadow",
+			"project",
+			"#bio",
+			"bio",
+			"linear",
+			"contact",
+			"	",
+			".project",
+			"projects",
+			"slide",
+			"projects",
+			"legal",
+			"projects",
+			"project",
+			"right",
+			"	",
+			"glowBottom",
+			"project",
+			"a.logo",
+			"@media",
+			"projects",
+			"projectList",
+			"biopic",
+			"debugger",
+			"section",
+			"footer",
+			";",
+			"  ",
+			"	",
+			"aspect ratio",
+			"	",
+			"constructor",
+			"animate",
+			"opacity",
+			"remove",
+			"animate"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"	",
+			"    ",
+			"",
+			"GPU: auto",
+			"    ",
+			"",
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 69,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								659,
+								659
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "style.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "gg.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "Natives.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Algebra.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Network.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "Default.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								299,
+								299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Level.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.33,
+			0.66,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"project": "gg.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"level",
+				"Level.coffee"
+			],
+			[
+				"de",
+				"Default.coffee"
+			],
+			[
+				"alge",
+				"Algebra.coffee"
+			],
+			[
+				"nati",
+				"Natives.coffee"
+			],
+			[
+				"net",
+				"Network.coffee"
+			],
+			[
+				"style",
+				"S/style.styl"
+			],
+			[
+				"",
+				"Makefile"
+			],
+			[
+				"mak",
+				"Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
