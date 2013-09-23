@@ -2,14 +2,18 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  this.Menu = (function() {
+  window.oncontextmenu = function() {
+    return false;
+  };
 
-    Menu.name = 'Menu';
+  this.ContextMenu = (function() {
 
-    function Menu(_arg) {
+    ContextMenu.name = 'ContextMenu';
+
+    function ContextMenu(_arg) {
       var name, option, options;
       options = _arg.options;
-      this.element = $('<div>').css('display', 'none').appendTo(game.level.infospace);
+      this.element = $('<div>').css('display', 'none').addClass('contextmenu').appendTo(game.level.infospace);
       for (name in options) {
         option = options[name];
         new Option(union(option, {
@@ -19,7 +23,7 @@
       }
     }
 
-    Menu.prototype.location = function(_arg) {
+    ContextMenu.prototype.location = function(_arg) {
       this.x = _arg.x, this.y = _arg.y;
       if (arguments.length === 0) {
         return {
@@ -35,7 +39,7 @@
       return this;
     };
 
-    Menu.prototype.hidden = function(what) {
+    ContextMenu.prototype.hidden = function(what) {
       if (arguments.length === 0) {
         return this.element.css('display') === 'none';
       } else {
@@ -44,7 +48,7 @@
       return this;
     };
 
-    Menu.main = {
+    ContextMenu.main = {
       beings: {
         icon: "imgs/tree.png",
         action: function() {
@@ -77,7 +81,7 @@
       }
     };
 
-    return Menu;
+    return ContextMenu;
 
   })();
 

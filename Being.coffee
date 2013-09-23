@@ -1,5 +1,7 @@
 
 class @Being extends Body
+	isBeing: true
+
 	constructor: (options) ->
 		super options
 
@@ -7,6 +9,7 @@ class @Being extends Body
 
 		{
 			@name
+			@kind
 			@owner
 			@orders
 			@weapon
@@ -41,6 +44,8 @@ class @Being extends Body
 		} = options
 
 		@inventory = []
+
+		game.players[@owner]?.heroes.push(this)
 
 	calcDamage: ->
 		damage = @weapon.damageMin + Math.random() * (@weapon.damageMax - @weapon.damageMin)

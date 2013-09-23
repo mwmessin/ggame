@@ -9,6 +9,8 @@
 
     Body.name = 'Body';
 
+    Body.prototype.isBody = true;
+
     function Body(options) {
       Body.__super__.constructor.call(this, options);
       this.direction = new Vector2(options.direction || [0, 0]);

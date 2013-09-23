@@ -6,15 +6,13 @@
     Level.name = 'Level';
 
     function Level(_arg) {
-      var being, beings, beingset, beingspace, element, engine, grid, i, infospace, item, items, itemset, name, owner, row, rows, tile, tileset, tilespace, x, y, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref;
+      var being, beings, beingspace, element, grid, i, infospace, item, items, name, row, rows, tile, tilespace, x, y, _i, _j, _k, _l, _len, _len1, _len2, _len3;
       name = _arg.name, grid = _arg.grid, beings = _arg.beings, items = _arg.items;
-      engine = game.engine;
-      tileset = game.tiles;
-      beingset = game.beings;
-      itemset = game.items;
       this.name = name;
       this.grid = grid;
-      element = this.element = $("<div>").addClass("level").appendTo(game.view);
+      element = this.element = $("<div>", {
+        "class": "level"
+      });
       tilespace = this.tilespace = $("<div>").addClass("tilespace").appendTo(element);
       beingspace = this.beingspace = $("<div>").addClass("beingspace").appendTo(element);
       infospace = this.infospace = $("<div>").addClass("infospace").appendTo(element);
@@ -27,7 +25,7 @@
           if (tile == null) {
             continue;
           }
-          extend(tile, tileset[tile.name]);
+          extend(tile, game.tiles[tile.name]);
           extend(tile, {
             parent: tilespace,
             location: [x * 24, y * 24]
@@ -38,41 +36,44 @@
       }
       for (_k = 0, _len2 = beings.length; _k < _len2; _k++) {
         being = beings[_k];
-        owner = being.owner;
-        extend(being, beingset[being.kind]);
-        extend(being, {
+        game.engine.add(new Being(union(being, game.beings[being.kind], {
           parent: beingspace
-        });
-        being = new Being(being);
-        if ((_ref = game.players[owner]) != null) {
-          _ref.heroes.push(being);
-        }
-        engine.add(being);
+        })));
       }
       for (_l = 0, _len3 = items.length; _l < _len3; _l++) {
         item = items[_l];
-        extend(item, itemset[item.kind]);
-        item.parent = beingspace;
-        item = new Item(item);
-        engine.add(item);
+        game.engine.add(new Item(union(item, game.items[item.kind], {
+          parent: beingspace
+        })));
       }
     }
 
     Level.prototype.save = function() {
-      var being, row, tile;
+      var beings, body, items, row, tile, _i, _len, _ref;
+      beings = [];
+      items = [];
+      _ref = game.engine.system;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        body = _ref[_i];
+        if (body.isBeing) {
+          beings.push(body.save());
+        } else if (body.isItem) {
+          items.push(body.save());
+        }
+      }
       return {
         name: this.name,
         grid: (function() {
-          var _i, _len, _ref, _results;
-          _ref = this.grid;
+          var _j, _len1, _ref1, _results;
+          _ref1 = this.grid;
           _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            row = _ref[_i];
+          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+            row = _ref1[_j];
             _results.push((function() {
-              var _j, _len1, _results1;
+              var _k, _len2, _results1;
               _results1 = [];
-              for (_j = 0, _len1 = row.length; _j < _len1; _j++) {
-                tile = row[_j];
+              for (_k = 0, _len2 = row.length; _k < _len2; _k++) {
+                tile = row[_k];
                 _results1.push(tile != null ? tile.save() : void 0);
               }
               return _results1;
@@ -80,16 +81,8 @@
           }
           return _results;
         }).call(this),
-        beings: (function() {
-          var _i, _len, _ref, _results;
-          _ref = game.engine.system;
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            being = _ref[_i];
-            _results.push(being.save());
-          }
-          return _results;
-        })()
+        beings: beings,
+        items: items
       };
     };
 
@@ -325,6 +318,119 @@
         this.orientTile(x, y - 2, true);
         return this.orientTile(x + 1, y - 2, true);
       }
+    };
+
+    Level.prototype.generateTerrain = function(order) {
+      var average, col, factor, grid, half, length, random, segments, terrain, x, y, z, _i, _j, _k, _l, _len, _len1;
+      if (order == null) {
+        order = 1;
+      }
+      segments = Math.pow(2, order);
+      grid = [];
+      for (x = _i = 0; 0 <= segments ? _i <= segments : _i >= segments; x = 0 <= segments ? ++_i : --_i) {
+        col = grid[x] = [];
+        for (y = _j = 0; 0 <= segments ? _j <= segments : _j >= segments; y = 0 <= segments ? ++_j : --_j) {
+          col[y] = 0.0;
+        }
+      }
+      random = function(factor) {
+        return (Math.random() - 0.5) * 2 * factor;
+      };
+      factor = 1;
+      length = segments;
+      while (length >= 2) {
+        half = length / 2;
+        y = 0;
+        while (y < segments) {
+          x = 0;
+          while (x < segments) {
+            average = (grid[y][x] + grid[y + length][x] + grid[y][x + length] + grid[y + length][x + length]) / 4;
+            grid[y + half][x + half] = average + random(factor);
+            x += length;
+          }
+          y += length;
+        }
+        y = half;
+        while (y < segments) {
+          x = half;
+          while (x < segments) {
+            if (y === half) {
+              average = (grid[(y - length + segments) % segments][x] + grid[y - half][x + half] + grid[y][x] + grid[y - half][x - half]) / 4;
+              grid[y - half][x] = average + random(factor);
+            }
+            average = (grid[y - half][x + half] + grid[y][(x + length + segments) % segments] + grid[y + half][x + half] + grid[y][x]) / 4;
+            grid[y][x + half] = average + random(factor);
+            average = (grid[y][x] + grid[y + half][x + half] + grid[(y + length + segments) % segments][x] + grid[y + half][x - half]) / 4;
+            grid[y + half][x] = average + random(factor);
+            if (x === half) {
+              average = (grid[y - half][x - half] + grid[y][x] + grid[y + half][x - half] + grid[y][(x - length + segments) % segments]) / 4;
+              grid[y][x - half] = average + random(factor);
+            }
+            x += length;
+          }
+          y += length;
+        }
+        length /= 2;
+        factor /= 2;
+      }
+      terrain = [];
+      for (x = _k = 0, _len = grid.length; _k < _len; x = ++_k) {
+        col = grid[x];
+        terrain[x] = [];
+        for (y = _l = 0, _len1 = col.length; _l < _len1; y = ++_l) {
+          z = col[y];
+          terrain[x][y] = {
+            name: 'dirt',
+            z: z
+          };
+        }
+      }
+      return terrain;
+    };
+
+    Level.prototype.canvasTerrain = function(terrain) {
+      var canvas, context, data, frame, setPixel, v, width, x, y, _i, _j, _ref;
+      width = terrain.length;
+      $("body").append(canvas = $("<canvas>", {
+        css: {
+          border: "1px solid green"
+        }
+      }).attr({
+        width: width,
+        height: width
+      }));
+      context = canvas[0].getContext("2d");
+      frame = (_ref = context.getImageData(0, 0, width, width), data = _ref.data, _ref);
+      setPixel = function(x, y, r, g, b, a) {
+        var index;
+        index = (x + y * width) * 4;
+        data[index + 0] = r;
+        data[index + 1] = g;
+        data[index + 2] = b;
+        return data[index + 3] = a;
+      };
+      for (x = _i = 0; 0 <= width ? _i < width : _i > width; x = 0 <= width ? ++_i : --_i) {
+        for (y = _j = 0; 0 <= width ? _j < width : _j > width; y = 0 <= width ? ++_j : --_j) {
+          v = (terrain[x][y].z + 1) / 2 * 255 | 0;
+          setPixel(x, y, v, v, v, 255);
+        }
+      }
+      return context.putImageData(frame, 0, 0);
+    };
+
+    Level.prototype.logTerrain = function(terrain) {
+      var msg, x, y, _i, _j, _len, _len1, _results;
+      _results = [];
+      for (_i = 0, _len = terrain.length; _i < _len; _i++) {
+        x = terrain[_i];
+        msg = "";
+        for (_j = 0, _len1 = x.length; _j < _len1; _j++) {
+          y = x[_j];
+          msg += y.z.toFixed(2) + " ";
+        }
+        _results.push(console.log(msg));
+      }
+      return _results;
     };
 
     return Level;
